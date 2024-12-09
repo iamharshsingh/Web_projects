@@ -1,0 +1,14 @@
+.app-container {
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 60px; /* Adjust based on the navbar height */
+  display: flex;
+  flex-direction: column;
+  background-image: url('./assets/red_plus_background.png');
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents any overflow outside the container */
+}

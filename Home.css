@@ -1,0 +1,100 @@
+@keyframes slideToTop {
+    0% {
+      transform: translateX(-100vw) translateY(100vh); /* Start off-screen */
+      opacity: 0; /* Hidden at the start */
+    }
+    50% {
+      transform: translateX(0) translateY(0); /* Slide to initial position */
+      opacity: 1; /* Fully visible at the middle */
+    }
+    100% {
+      transform: translate(10vw, -20vh); /* Final position inside the frame */
+      opacity: 1; /* Stay visible */
+    }
+  }
+  
+  .home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Ensures content doesn't go outside the container */
+  }
+  
+  .home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('HH.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); /* Apply blur effect */
+    z-index: -1; /* Place the background image behind other content */
+  }
+  
+  /* Heart Image Styling */
+  .home-container .heart-image {
+    position: absolute;
+    top: 10%; /* Adjust the position from the top */
+    right: 10%; /* Adjust the position from the right */
+    width: 80px; /* Set the size of the heart image */
+    height: auto; /* Maintain the aspect ratio */
+    z-index: 1; /* Ensure the heart is above the background */
+  }
+  
+  .home-container h1 {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: slideToTop 2.5s ease-in-out forwards; /* Adjusted duration */
+    color: #ff6347; /* Tomato color for h1 */
+    background: linear-gradient(45deg, #ff6347, #00bfff); /* Gradient for the header */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    color: transparent; /* Make the text transparent to show the gradient */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better visibility */
+  }
+  
+  .home-container p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    animation: slideToTop 2.5s ease-in-out forwards;
+    animation-delay: 0.5s; /* Staggered start for p tag */
+    color: #fff; /* White color for p */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow for better readability */
+    line-height: 1.8; /* Add space between lines for readability */
+  }
+  
+  .checkup-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: skyblue;
+    color: white;
+    font-size: 14px;
+    padding: 12px 50px;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase; /* Make the button text uppercase for emphasis */
+    font-weight: bold;
+  }
+  
+  .checkup-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
+  .checkup-button:hover:enabled {
+    background-color: #27ae60;
+  }
+  

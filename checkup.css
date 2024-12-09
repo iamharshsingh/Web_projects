@@ -1,0 +1,38 @@
+.checkup-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Light gray background */
+    text-align: center;
+    color: #333;
+  }
+  
+  .checkup-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .checkup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .health-button {
+    background-color: #3498db;
+    color: red;
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .health-button:hover {
+    background-color: #2980b9;
+  }
+  
